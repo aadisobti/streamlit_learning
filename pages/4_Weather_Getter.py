@@ -18,7 +18,6 @@ encoded_location = requests.utils.quote(location)
 
 url = f"{base_url}{encoded_location}?key={api_key}"
 
-@st.cache_data
 def fetch_weather_data(api_url):
     response = requests.get(api_url)
     if response.status_code == 200:
